@@ -1,0 +1,51 @@
+html, body{
+    height: 100%;    
+}
+
+
+#sound { display: none }
+body{
+    background-color: rgb(245, 180, 230);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.board{
+    background-color: rgb(255, 0, 0);
+    height: 300px;
+    width: 300px;
+    display: grid;
+    border-radius: 2.5%;
+    opacity: 80%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.cell{
+    border-bottom: 5px solid rgb(255, 255, 255);    
+    border-right: 5px solid rgb(255, 255, 255);
+    font-size: 50px;
+    text-align: center;
+    line-height: 95px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+    user-select: none;
+}
+
+.cell:nth-child(3n){
+    border-right: none;
+}
+
+.cell:nth-child(n+7){
+    border-bottom: none;
+}
+
+.cell.highlight{
+    background-color:rgb(100, 154, 236);
+}
+
+.cell:nth-child(n+7){
+    border-radius: 2.5%;
+}
